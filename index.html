@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DUO KITTU CAREER PATH</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Premium gradient background -->
+  <div class="bg-overlay"></div>
+
+  <!-- Header / Logo -->
+  <header class="main-header">
+    <div class="logo">
+      <!-- Simple text logo – replace with image if you have one -->
+      <span class="logo-icon">DK</span>
+      <span class="logo-text">DUO KITTU CAREER PATH</span>
+    </div>
+    <div class="created-by">
+      Created by <strong>VISHWANATHAN &amp; JEEVANESH</strong>
+    </div>
+  </header>
+
+  <!-- LOGIN PAGE -->
+  <section id="login-section" class="center-section">
+    <div class="card login-card glass">
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Plan your future with precision</p>
+      <form id="login-form">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your name (e.g., Vishwa)"
+          required
+        />
+
+        <label for="mobile">Mobile Number</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter your mobile number"
+          required
+        />
+
+        <button type="submit" class="btn primary-btn">Login</button>
+
+        <div class="or-line">
+          <span>OR</span>
+        </div>
+
+        <button type="button" class="btn google-btn">
+          Continue with Google
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAIN PAGE -->
+  <section id="main-section" class="center-section hidden">
+    <div class="card main-card glass">
+      <h1>Plan Your Future <span class="accent">With Precision</span></h1>
+      <p class="subtitle">
+        Select your academic background and industry to unlock a personalized roadmap.
+      </p>
+
+      <!-- Greeting after login -->
+      <p id="welcome-user" class="welcome-user"></p>
+
+      <form id="career-form" class="career-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="degree">Degree</label>
+            <select id="degree" required>
+              <option value="">Select Degree</option>
+              <option value="BE">BE</option>
+              <option value="B.Tech">B.Tech</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="branch">Branch</label>
+            <select id="branch" required>
+              <option value="">Select Branch</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="CSE">CSE</option>
+              <option value="CYBER SECURITY">CYBER SECURITY</option>
+              <option value="CIVIL">CIVIL</option>
+              <option value="MECHANICAL">MECHANICAL</option>
+              <option value="IT">IT</option>
+              <option value="AI & DS">AI &amp; DS</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" required>
+              <option value="">Select Industry</option>
+              <option value="Software">Software</option>
+              <option value="Hardware">Hardware</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary-btn confirm-btn">
+          Confirm Analysis
+        </button>
+      </form>
+
+      <!-- Result section -->
+      <div id="result-section" class="result-section hidden">
+        <h2>Recommended Domains</h2>
+        <p class="subtitle small">
+          Handpicked domains for your selected branch and industry in India.
+        </p>
+
+        <div id="domains-container" class="domains-container">
+          <!-- Cards will be inserted by JavaScript -->
+        </div>
+
+        <!-- Contact section -->
+        <div class="contact-section">
+          <h2>Contact Us</h2>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Direct Support</h3>
+              <p>Call Professional 1: <a href="tel:+917639516071">+91 7639516071</a></p>
+              <p>Call Professional 2: <a href="tel:+918015272452">+91 8015272452</a></p>
+            </div>
+            <div class="contact-card">
+              <h3>Email Inquiries</h3>
+              <p>Admin Support 1: <a href="mailto:nathanmvishwa@gmail.com">nathanmvishwa@gmail.com</a></p>
+              <p>Admin Support 1: <a href="mailto:bavebave222@gmail.com">bavebave222@gmail.com</a></p>
+              <p>Admin Support 2: <a href="mailto:duokittu@gmail.com">duokittu@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>© <span id="year"></span> DUO KITTU CAREER PATH. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
