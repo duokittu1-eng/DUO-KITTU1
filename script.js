@@ -12,10 +12,8 @@ if (loginForm) {
     const nameInput = document.getElementById("fullName");
     const mobileInput = document.getElementById("mobile");
     const name = nameInput ? nameInput.value.trim() : "";
-    const mobile = mobileInput ? mobileInput.value.trim() : "";
-    if (!name || !mobile) {
-      alert("Please enter your name and mobile number.");
-      return;
+  
+   
     }
     welcomeUser.textContent = "Hi " + name + ", let us design your career roadmap.";
     loginSection.classList.add("hidden");
@@ -163,4 +161,5 @@ function renderDomains(domains, branch, industry) {
 
 // ----- Footer year -----
 const yearSpan = document.getElementById("year");
+
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
