@@ -10,12 +10,14 @@ if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const nameInput = document.getElementById("fullName");
-    
+    const qualificationInput = document.getElementById("qualification");
     const name = nameInput ? nameInput.value.trim() : "";
-  
-   
+    const qualification = qualification Input ? qualificationInput.value.trim() : "";
+    if (!name || !qualification) {
+      alert("Please enter your name and qualification.");
+      return;
     }
-    welcomeUser.textContent = "Hi " + name + ", let us design your career roadmap.";
+    welcomeUser.textContent = "Hi " + name + "("+qualification+"), let us design your career roadmap.";
     loginSection.classList.add("hidden");
     mainSection.classList.remove("hidden");
   });
@@ -161,6 +163,4 @@ function renderDomains(domains, branch, industry) {
 
 // ----- Footer year -----
 const yearSpan = document.getElementById("year");
-
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
