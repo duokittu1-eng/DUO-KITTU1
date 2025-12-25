@@ -1,152 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DUO KITTU CAREER PATH</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUO KITTU CAREER PATH - Your Engineering Career Guide</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Premium gradient background -->
-  <div class="bg-overlay"></div>
-
-  <!-- Header / Logo -->
-  <header class="main-header">
-    <div class="logo">
-      <!-- Simple text logo – replace with image if you have one -->
-      <span class="logo-icon">DK</span>
-      <span class="logo-text">DUO KITTU CAREER PATH</span>
-    </div>
-    <div class="created-by">
-      Created by <strong>VISHWANATHAN &amp; JEEVANESH</strong>
-    </div>
-  </header>
-
-  <!-- LOGIN PAGE -->
-  <section id="login-section" class="center-section">
-    <div class="card login-card glass">
-      <h1>Welcome Back</h1>
-      <p class="subtitle">Plan your future with precision</p>
-      <form id="login-form">
-        <label for="fullName">Full Name</label>
-        <input
-          type="text"
-          id="fullName"
-          name="fullName"
-          placeholder="Enter your name"
-          required
-        />
-        <label for="qualification">Qualification</label>
-        <select
-          id="qualification"
-          name="qualification"
-          required
-          >
-          <option value="">Select your qualification</option>
-          <option value="schooling">Schooling</option>
-          <option value="diploma">Diploma</option>
-          <option value="bachelor">Bachelor Degree</option>
-        </select>
-
-
-        <button type="submit" class="btn primary-btn">Login</button>
-
-       
-        
-      </form>
-    </div>
-  </section>
-
-  <!-- MAIN PAGE -->
-  <section id="main-section" class="center-section hidden">
-    <div class="card main-card glass">
-      <h1>Plan Your Future <span class="accent">With Precision</span></h1>
-      <p class="subtitle">
-        Select your academic background and industry to unlock a personalized roadmap.
-      </p>
-
-      <!-- Greeting after login -->
-      <p id="welcome-user" class="welcome-user"></p>
-
-      <form id="career-form" class="career-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="degree">Degree</label>
-            <select id="degree" required>
-              <option value="">Select Degree</option>
-              <option value="BE">BE</option>
-              <option value="B.Tech">B.Tech</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="branch">Branch</label>
-            <select id="branch" required>
-              <option value="">Select Branch</option>
-              <option value="ECE">ECE</option>
-              <option value="EEE">EEE</option>
-              <option value="CSE">CSE</option>
-              <option value="CYBER SECURITY">CYBER SECURITY</option>
-              <option value="CIVIL">CIVIL</option>
-              <option value="MECHANICAL">MECHANICAL</option>
-              <option value="IT">IT</option>
-              <option value="AI & DS">AI &amp; DS</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="industry">Industry</label>
-            <select id="industry" required>
-              <option value="">Select Industry</option>
-              <option value="Software">Software</option>
-              <option value="Hardware">Hardware</option>
-            </select>
-          </div>
+    <!-- Premium Header - Always Visible -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-rocket"></i>
+            <span>DUO KITTU</span>
+            <small>CAREER PATH</small>
         </div>
-
-        <button type="submit" class="btn primary-btn confirm-btn">
-          Confirm Analysis
-        </button>
-      </form>
-
-      <!-- Result section -->
-      <div id="result-section" class="result-section hidden">
-        <h2>Recommended Domains</h2>
-        <p class="subtitle small">
-          Handpicked domains for your selected branch and industry in India.
-        </p>
-
-        <div id="domains-container" class="domains-container">
-          <!-- Cards will be inserted by JavaScript -->
+        <div class="user-info" id="userInfo" style="display: none;">
+            <i class="fas fa-user"></i>
+            <span id="userName"></span>
         </div>
+    </header>
 
-        <!-- Contact section -->
-        <div class="contact-section">
-          <h2>Contact Us</h2>
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3>Direct Support</h3>
-              <p>Call Professional 1: <a href="tel:+917639516071">+91 7639516071</a></p>
-              <p>Call Professional 2: <a href="tel:+918015272452">+91 8015272452</a></p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Login/Welcome Section -->
+        <section id="loginSection" class="section active">
+            <div class="hero-bg"></div>
+            <div class="login-container">
+                <div class="login-card">
+                    <h1 class="premium-title">Welcome to Your Future</h1>
+                    <p class="premium-subtitle">Discover your perfect career path</p>
+                    <form id="loginForm" class="login-form">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" id="userNameInput" placeholder="e.g. Vishwa" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Qualification</label>
+                            <select id="qualification" required>
+                                <option value="">Select Qualification</option>
+                                <option value="schooling">Schooling (10th/12th)</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="bachelor">Bachelor Degree (BE/B.Tech)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="premium-btn primary">
+                            <span>Start Journey</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="contact-card">
-              <h3>Email Inquiries</h3>
-              <p>Admin Support 1: <a href="mailto:nathanmvishwa@gmail.com">nathanmvishwa@gmail.com</a></p>
-              <p>Admin Support 2: <a href="mailto:bavebave222@gmail.com">bavebave222@gmail.com</a></p>
-              <p>Admin Support 3: <a href="mailto:duokittu1@gmail.com">duokittu1@gmail.com</a></p>
+        </section>
+
+        <!-- Career Selection Section -->
+        <section id="careerSection" class="section">
+            <div class="container">
+                <div class="welcome-user">
+                    <h2>Welcome back, <span id="welcomeName"></span>!</h2>
+                    <p>Your qualification: <strong id="userQualification"></strong></p>
+                </div>
+                
+                <form id="careerForm" class="career-form">
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label>Degree</label>
+                            <select id="degree" required>
+                                <option value="BE/B.Tech">BE/B.Tech</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label>Branch</label>
+                            <select id="branch" required>
+                                <option value="">Select Branch</option>
+                                <option value="ECE">ECE</option>
+                                <option value="EEE">EEE</option>
+                                <option value="CSE">CSE</option>
+                                <option value="CYBER SECURITY">CYBER SECURITY</option>
+                                <option value="CIVIL">CIVIL</option>
+                                <option value="MECHANICAL">MECHANICAL</option>
+                                <option value="IT">IT</option>
+                                <option value="AI&DS">AI&DS</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step">
+                        <div class="input-group">
+                            <label>Industry</label>
+                            <select id="industry" required>
+                                <option value="">Select Industry</option>
+                                <option value="Software">Software</option>
+                                <option value="Hardware">Hardware</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="premium-btn confirm-btn" id="confirmBtn" style="display: none;">
+                        <span>Confirm & Explore Domains</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </div>
-          </div>
+        </section>
+
+        <!-- Domains Results Section -->
+        <section id="domainsSection" class="section">
+            <div class="container">
+                <div class="results-header">
+                    <h2>Career Domains for <span id="resultBranch"></span> - <span id="resultIndustry"></span></h2>
+                    <p id="resultSummary"></p>
+                </div>
+                <div id="domainsContainer" class="domains-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>7639516071, 8015272452</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>nathanmvishwa@gmail.com, bavebave222@gmail.com, duokittu1@gmail.com</span>
+                </div>
+            </div>
+            <p class="credits">Created by <strong>VISHWANATHAN & JEEVANESH</strong> <span id="year"></span></p>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <footer class="main-footer">
-    <p>© <span id="year"></span> DUO KITTU CAREER PATH. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
-
