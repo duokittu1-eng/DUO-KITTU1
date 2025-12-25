@@ -10,7 +10,7 @@ if (loginForm) {
   loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const nameInput = document.getElementById("fullName");
-    const mobileInput = document.getElementById("mobile");
+    
     const name = nameInput ? nameInput.value.trim() : "";
   
    
@@ -163,3 +163,4 @@ function renderDomains(domains, branch, industry) {
 const yearSpan = document.getElementById("year");
 
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
